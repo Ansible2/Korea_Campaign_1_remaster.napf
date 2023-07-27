@@ -1,0 +1,190 @@
+#if __has_include("Headers\descriptionEXT\descriptionEXT defines.hpp")
+    #include "Headers\descriptionEXT\descriptionEXT defines.hpp"
+#endif
+
+/* ----------------------------------------------------------------------------
+    Strings (image paths and text)
+---------------------------------------------------------------------------- */
+// IF BRIEFINGNAME IS AN EMPTY STRING MISSION WILL NOT SHOW IN SELECTOR
+// Mission name displayed in the mission selection menu.
+// briefingName = "";
+
+//Text to be displayed below the overviewPicture on the mission selection screen when the mission is available to play
+// overviewText = "";
+
+// path to image that appears when in the mission select screen
+// overviewPicture = "";
+
+// Mission title during load
+// onLoadName = "";
+
+// sub text during load screen
+// onLoadMission = "";
+
+// Relative path to image that appears in load screens
+// loadScreen = "";
+
+/* ----------------------------------------------------------------------------
+    Respawns
+---------------------------------------------------------------------------- */
+/* respawn = RESPAWN_TYPE_BASE; */
+respawnOnStart = RESPAWN_ON_START_NONE;
+respawnDialog = ON;
+respawnDelay = 15;
+respawnButton = ON;
+respawn = RESPAWN_TYPE_BASE;
+respawnTemplates[] = {RESPAWN_TEMPLATE_MENU_POSITION,RESPAWN_TEMPLATE_SPECTATOR};
+/*
+respawnTemplatesWest[] = {  };
+respawnTemplatesEast[] = {  };
+respawnTemplatesGuer[] = {  };
+respawnTemplatesCiv[] = {  };
+respawnTemplatesVirtual[] = {}; // Virtual players, used mainly in Curator (Zeus) missions
+*/
+
+/* ----------------------------------------------------------------------------
+    Garbage Collector
+---------------------------------------------------------------------------- */
+corpseManagerMode = CW_MANAGER_MODE_ALL;
+corpseLimit = 15;
+corpseRemovalMinTime = 300;
+corpseRemovalMaxTime = 600;
+
+wreckManagerMode = CW_MANAGER_MODE_ALL;
+wreckLimit = 3;
+wreckRemovalMinTime = 300;
+wreckRemovalMaxTime = 600;
+// min distance from a corps or a wreck to delete
+minPlayerDistance = 50;
+
+/* ----------------------------------------------------------------------------
+    Misc
+---------------------------------------------------------------------------- */
+saving = OFF;
+disabledAI = ON;
+enableDebugConsole = ENABLE_DEBUG_CONSOLE_ADMIN_HOSTS;
+disableChannels[] = {
+    {
+        SIDE_CHANNEL_ID, // channel ID
+        false,	// disable text chat
+        true	// disable voice chat
+    },
+    GLOBAL_CHANNEL_ID,
+    COMMAND_CHANNEL_ID,
+    GROUP_CHANNEL_ID,
+    VEHICLE_CHANNEL_ID,
+    DIRECT_CHANNEL_ID
+};
+
+/* ----------------------------------------------------------------------------
+    Configs
+---------------------------------------------------------------------------- */
+class Header
+{
+    gameType = GAME_TYPE_COOP;
+    minPlayers =  	 1;
+    maxPlayers = 	 14;
+};
+
+class CfgFunctions
+{
+    #if __has_include("KISKA Systems\KISKA Functions.hpp")
+        #include "KISKA Systems\KISKA Functions.hpp"
+    #endif
+    #if __has_include("Headers\descriptionEXT\functions.hpp")
+        #include "Headers\descriptionEXT\functions.hpp"
+    #endif
+};
+
+class CfgSounds
+{
+    #if __has_include("Headers\descriptionEXT\sounds.hpp")
+        #include "Headers\descriptionEXT\sounds.hpp"
+    #endif
+};
+
+class Params
+{
+    #if __has_include("Headers\descriptionEXT\missionParams.hpp")
+        #include "Headers\descriptionEXT\missionParams.hpp"
+    #endif
+};
+
+class CfgCommunicationMenu
+{
+    #if __has_include("Headers\descriptionEXT\supports.hpp")
+        #include "Headers\descriptionEXT\supports.hpp"
+    #endif
+};
+
+class CfgTaskDescriptions
+{
+    #if __has_include("Headers\descriptionEXT\taskDescriptions.hpp")
+        #include "Headers\descriptionEXT\taskDescriptions.hpp"
+    #endif
+};
+
+class CfgDebriefing
+{
+    /*
+    class End1
+    {
+        title = "[END]";
+        subtitle = "You Did Not Survive";
+        description = "Game Over";
+        pictureBackground = "";
+        picture = "KIA";
+        pictureColor[] = {0.6,0.1,0.2,1};
+    };
+    */
+};
+
+
+class CfgNotifications
+{
+    /*
+    class SpecialWarning
+    {
+        title = "WARNING!!";
+        iconPicture = "A3\ui_f\data\Map\Markers\Military\warning_CA.paa";
+        description = "%1";
+        color[] = {1,0,0,1};
+        duration = 5;
+    };
+    */
+};
+
+class KISKA_dynamicSimulation
+{
+    enableDynamicSimulation = ON;
+
+    class Coef
+    {
+        IsMoving = 1;
+    };
+
+    class ActivationDistance
+    {
+        Group = 1000;
+        Vehicle = 1000;
+        EmptyVehicle = 50;
+        Prop = 50;
+    };
+};
+
+
+#if __has_include("Headers\descriptionEXT\loadouts.hpp")
+    #include "Headers\descriptionEXT\loadouts.hpp"
+#endif
+
+#if __has_include("Headers\descriptionEXT\Tasks\KISKA Tasks.hpp")
+    #include "Headers\descriptionEXT\Tasks\KISKA Tasks.hpp"
+#endif
+
+#if __has_include("Headers\descriptionEXT\KISKA Traits.hpp")
+    #include "Headers\descriptionEXT\KISKA Traits.hpp"
+#endif
+
+#if __has_include("Headers\descriptionEXT\Bases\KISKA Bases.hpp")
+    #include "Headers\descriptionEXT\Bases\KISKA Bases.hpp"
+#endif
