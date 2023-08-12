@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1034;
+	toggles=10;
 	mods[]=
 	{
 		"3denEnhanced"
@@ -25,9 +25,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={18683.91,199.2448,4169.3813};
-		dir[]={-0.49618205,-0.70915747,0.50101066};
-		up[]={-0.49902683,0.70504034,0.50388497};
-		aside[]={0.71056437,-5.933689e-007,0.70371491};
+		dir[]={-0.49615419,-0.70911747,0.50098246};
+		up[]={-0.49898797,0.70509034,0.50384384};
+		aside[]={0.71052241,-1.4901161e-008,0.70367461};
 	};
 };
 binarizationWanted=0;
@@ -40173,7 +40173,7 @@ class Mission
 			alpha=0.49800208;
 			a=286.08093;
 			b=332.17429;
-			angle=226.23743;
+			angle=226.23741;
 			id=3094;
 			atlOffset=0.92724609;
 		};
@@ -40188,7 +40188,7 @@ class Mission
 			alpha=0.49800208;
 			a=428.3566;
 			b=332.17429;
-			angle=226.23741;
+			angle=226.2374;
 			id=3095;
 			atlOffset=-3.3451538;
 		};
@@ -40315,12 +40315,12 @@ class Mission
 		class Item32
 		{
 			dataType="Marker";
-			position[]={18682.266,171.3206,2643.1895};
+			position[]={18562.125,171.25562,1968.5734};
 			name="marker_20";
 			type="o_support";
 			angle=0.1075518;
 			id=3106;
-			atlOffset=106.17595;
+			atlOffset=54.470078;
 		};
 		class Item33
 		{
@@ -40335,34 +40335,34 @@ class Mission
 		class Item34
 		{
 			dataType="Marker";
-			position[]={18635.912,185.91736,2644.5359};
+			position[]={18562.125,185.91736,1837.9951};
 			name="marker_23";
 			type="o_hq";
 			angle=0.10848264;
 			id=3109;
-			atlOffset=97.098854;
+			atlOffset=109.2301;
 		};
 		class Item35
 		{
 			dataType="Marker";
-			position[]={18636.566,185.61928,2682.7107};
+			position[]={18495.721,185.61928,2203.3076};
 			name="marker_24";
 			type="o_installation";
 			a=1.25;
 			b=1.25;
 			angle=0.10579636;
 			id=3110;
-			atlOffset=116.64935;
+			atlOffset=19.580048;
 		};
 		class Item36
 		{
 			dataType="Marker";
-			position[]={18727.633,151.40015,2642.3806};
+			position[]={18562.125,151.40015,2099.1516};
 			name="marker_25";
 			type="o_maint";
-			angle=0.10775234;
+			angle=0.10775233;
 			id=3111;
-			atlOffset=98.88546;
+			atlOffset=-37.029572;
 		};
 		class Item37
 		{
@@ -40403,12 +40403,12 @@ class Mission
 		class Item40
 		{
 			dataType="Marker";
-			position[]={18594.773,201.90103,2645.4641};
+			position[]={18562.125,201.90103,1707.4169};
 			name="marker_29";
 			type="o_plane";
 			angle=0.11076292;
 			id=3115;
-			atlOffset=85.924225;
+			atlOffset=91.728752;
 		};
 		class Item41
 		{
@@ -40446,11 +40446,11 @@ class Mission
 		class Item44
 		{
 			dataType="Marker";
-			position[]={18557.072,214.46974,2645.5422};
+			position[]={18562.125,214.46974,1576.8386};
 			name="marker_33";
 			type="o_air";
 			id=3120;
-			atlOffset=77.099136;
+			atlOffset=146.49945;
 		};
 		class Item45
 		{
@@ -42339,7 +42339,7 @@ class Mission
 			fillName="DiagGrid";
 			a=6.397809;
 			b=50;
-			angle=314.26108;
+			angle=314.26105;
 			id=7867;
 		};
 		class Item58
@@ -42353,7 +42353,7 @@ class Mission
 			fillName="DiagGrid";
 			a=6.397809;
 			b=50;
-			angle=210.25447;
+			angle=210.25446;
 			id=7868;
 			atlOffset=-5.7278748;
 		};
@@ -42383,7 +42383,7 @@ class Mission
 			fillName="DiagGrid";
 			a=6.397809;
 			b=36.813805;
-			angle=211.51781;
+			angle=211.51779;
 			id=7871;
 			atlOffset=-1.2917862;
 		};
@@ -42428,7 +42428,7 @@ class Mission
 			fillName="DiagGrid";
 			a=32.437523;
 			b=5.0140481;
-			angle=108.8634;
+			angle=108.86339;
 			id=7874;
 			atlOffset=-103.77779;
 		};
@@ -42473,7 +42473,7 @@ class Mission
 			fillName="DiagGrid";
 			a=32.437523;
 			b=5.0140481;
-			angle=235.84207;
+			angle=235.84204;
 			id=7877;
 			atlOffset=-0.64508057;
 		};
@@ -42488,7 +42488,7 @@ class Mission
 			fillName="DiagGrid";
 			a=32.437523;
 			b=5.0140481;
-			angle=175.08833;
+			angle=175.08832;
 			id=7878;
 			atlOffset=-1.5632324;
 		};
@@ -42503,7 +42503,7 @@ class Mission
 			fillName="DiagGrid";
 			a=32.437523;
 			b=5.0140481;
-			angle=142.42293;
+			angle=142.42291;
 			id=7879;
 		};
 		class Item69
@@ -42517,7 +42517,7 @@ class Mission
 			fillName="DiagGrid";
 			a=32.437523;
 			b=5.0140481;
-			angle=44.761471;
+			angle=44.761467;
 			id=7880;
 			atlOffset=0.91539001;
 		};
@@ -42547,7 +42547,7 @@ class Mission
 			fillName="DiagGrid";
 			a=18.03149;
 			b=5.0140481;
-			angle=154.27393;
+			angle=154.27391;
 			id=7882;
 			atlOffset=-0.31924438;
 		};
@@ -42577,7 +42577,7 @@ class Mission
 			fillName="DiagGrid";
 			a=18.03149;
 			b=5.0140481;
-			angle=185.35806;
+			angle=185.35805;
 			id=7884;
 			atlOffset=-2.2693176;
 		};
@@ -42592,7 +42592,7 @@ class Mission
 			fillName="DiagGrid";
 			a=18.03149;
 			b=5.0140481;
-			angle=129.92076;
+			angle=129.92075;
 			id=7885;
 		};
 		class Item75
@@ -42606,7 +42606,7 @@ class Mission
 			fillName="DiagGrid";
 			a=18.03149;
 			b=5.0140481;
-			angle=218.12831;
+			angle=218.1283;
 			id=7886;
 		};
 		class Item76
@@ -42620,7 +42620,7 @@ class Mission
 			fillName="DiagGrid";
 			a=32.437523;
 			b=5.0140481;
-			angle=138.43102;
+			angle=138.431;
 			id=7887;
 			atlOffset=0.12573242;
 		};
@@ -42635,7 +42635,7 @@ class Mission
 			fillName="DiagGrid";
 			a=24.341709;
 			b=5.0140481;
-			angle=235.84204;
+			angle=235.84203;
 			id=7888;
 			atlOffset=-1.5509949;
 		};
@@ -42650,7 +42650,7 @@ class Mission
 			fillName="DiagGrid";
 			a=32.437523;
 			b=5.0140481;
-			angle=235.84204;
+			angle=235.84203;
 			id=7889;
 			atlOffset=-5.3678741;
 		};
@@ -42705,7 +42705,7 @@ class Mission
 			type="mil_arrow2";
 			colorName="ColorEAST";
 			a=0.5;
-			angle=93.531975;
+			angle=93.531967;
 			id=7894;
 			atlOffset=13.59775;
 		};
@@ -42733,7 +42733,7 @@ class Mission
 			colorName="ColorEAST";
 			a=94.633392;
 			b=163.34427;
-			angle=208.96605;
+			angle=208.96603;
 			id=7896;
 			atlOffset=-8.1027956;
 		};
@@ -42745,7 +42745,7 @@ class Mission
 			type="mil_arrow2";
 			colorName="ColorEAST";
 			a=0.5;
-			angle=209.42761;
+			angle=209.4276;
 			id=7897;
 			atlOffset=-1.7199173;
 		};
@@ -42804,7 +42804,7 @@ class Mission
 			type="mil_arrow2";
 			colorName="ColorEAST";
 			a=0.5;
-			angle=99.894539;
+			angle=99.894531;
 			id=7902;
 		};
 	};
