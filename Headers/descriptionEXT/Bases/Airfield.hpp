@@ -16,8 +16,6 @@ class Airfield {
 
     class infantry
     {
-        // control tower guys
-        // infantryClasses[] = {};
         class controlTower
         {
             side = SIDE_OPFOR;
@@ -219,5 +217,123 @@ class Airfield {
             spawnPosition = "basePatrol_5_spawn";
         };
 
+    };
+
+    class simples
+    {
+        class bm21s
+        {
+            positions = "Airfield BM21 Markers";
+            class bm21
+            {
+                type = "RHS_BM21_MSV_01";
+            };
+        };
+
+        class helicopters
+        {
+            positions = "Airfield Helicopter Markers";
+            class lightHelicopter
+            {
+                superSimple = 0;
+                type = "rhs_ka60_c";
+                offset[] = {0,0,1.6};
+                vectorUp[] = {-0.0384334,0.0364229,0.998597};
+                selections[] = {
+                    {"zasleh",1},
+                    {"clan_sign",1},
+                    {"clan",1}
+                };
+            };
+            class heavyHelicopter
+            {
+                type = "RHS_Mi8mt_vvsc";
+                offset[] = {0,0,1.75};
+                vectorUp[] = {-0.0441042,0.0423563,0.998128};
+                selections[] = {
+                    {"zasleh",1},
+                    {"clan_sign",1},
+                    {"clan",1}
+                };
+            };
+        };
+
+        class fixedArty
+        {
+            positions = "Airfield Fixed Arty Markers";
+            class object
+            {
+                type = "rhs_D30_at_msv";
+            };
+        };
+
+        class fuelTrucks
+        {
+            positions = "Airfield FuelTruck Markers";
+            class truck
+            {
+                type = "RHS_Ural_Fuel_MSV_01";
+                selections[] = {
+                    {"zasleh",1},
+                    {"clan_sign",1},
+                    {"clan",1}
+                };
+            };
+        };
+
+        class planes
+        {
+            positions = "Airfield Plane Markers";
+            class attackPlane
+            {
+                type = "RHS_Su25SM_vvsc";
+                offset[] = {0,0,1.95};
+                vectorUp[] = {-0.0555795,0.062675,0.996485};
+            };
+        };
+
+        class towingTractors
+        {
+            positions = "Airfield Towing Tractor Markers";
+            class tractor
+            {
+                type = "CUP_O_TowingTractor_CSAT";
+            };
+        };
+
+        class lightVehicles
+        {
+            positions = "Airfield Light Vehicle Markers";
+
+            class uazOpen
+            {
+                type = "rhs_uaz_open_MSV_01";
+                selections[] = {
+                    {"clan_sign",1},
+                    {"clan",1}
+                };
+            };
+            class uaz : uazOpen
+            {
+                type = "RHS_UAZ_MSV_01";
+            };
+            class ural : uazOpen
+            {
+                type = "RHS_Ural_Flat_MSV_01";
+            };
+        };
+
+        class heavyVehicles
+        {
+            positions = "Airfield Heavy Vehicle Markers";
+            class tigr1
+            {
+                type = "rhs_tigr_sts_msv";
+            };
+            class tigr2
+            {
+                type = "rhs_tigr_m_msv";
+            };
+        };
     };
 };
