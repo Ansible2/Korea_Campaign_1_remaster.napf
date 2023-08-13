@@ -40,6 +40,15 @@ class Airfield {
         class samSiteB_spawns : samSiteA_spawns
         {
             positions = "SAM Site B Spawns";
+            numberOfUnits = 5;
+            unitsPerGroup = -1;
+        };
+
+        class northRunway_spawns
+        {
+            positions = "North Runway Spawns";
+            numberOfUnits = 5;
+            unitsPerGroup = -1;
         };
 
         class southWestOutpost_spawns
