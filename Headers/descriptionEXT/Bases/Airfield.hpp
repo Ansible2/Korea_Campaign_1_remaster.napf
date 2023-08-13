@@ -1,5 +1,4 @@
-class Airfield
-{
+class Airfield {
     side = SIDE_OPFOR;
     infantryClasses[] = {
         ENEMY_INFANTRY_UNIT_CLASSES
@@ -22,8 +21,8 @@ class Airfield
         class controlTower
         {
             side = SIDE_OPFOR;
-            numberOfUnits = 5;
-            unitsPerGroup = 1;
+            numberOfUnits = 8;
+            unitsPerGroup = -1;
 
             positions = "Control Tower Spawns";
 
@@ -65,51 +64,70 @@ class Airfield
             positions = "Radio Tower Spawns";
         };
 
-        class checkPoint_1a_spawns
+        class checkPoint_a_spawns
         {
             numberOfUnits = 4;
             unitsPerGroup = -1;
-            positions = "Checkpoint 1a Spawns";
+            positions = "Checkpoint a Spawns";
 
             dynamicSim = ON;
             canPath = ON;
         };
-        class checkPoint_1b_spawns : checkPoint_1a_spawns
+        class checkPoint_b_spawns : checkPoint_a_spawns
         {
             numberOfUnits = 5;
             unitsPerGroup = -1;
-            positions = "Checkpoint 1b Spawns";
+            positions = "Checkpoint b Spawns";
         };
-        class checkPoint_1c_spawns : checkPoint_1a_spawns
+        class checkPoint_c_spawns : checkPoint_a_spawns
         {
             numberOfUnits = 6;
             unitsPerGroup = -1;
-            positions = "Checkpoint 1c Spawns";
+            positions = "Checkpoint c Spawns";
         };
-        class checkPoint_1d_spawns : checkPoint_1a_spawns
+        class checkPoint_d_spawns : checkPoint_a_spawns
         {
             numberOfUnits = 6;
             unitsPerGroup = -1;
-            positions = "Checkpoint 1d Spawns";
+            positions = "Checkpoint d Spawns";
+        };
+        class checkPoint_e_spawns : checkPoint_a_spawns
+        {
+            numberOfUnits = 8;
+            unitsPerGroup = -1;
+            positions = "Checkpoint e Spawns";
         };
 
-        class tower_1_spawns
+        class tower_1a_spawns
         {
-            numberOfUnits = 2;
-            unitsPerGroup = 2;
-            positions = "Tower 1 Spawns";
+            numberOfUnits = 4;
+            unitsPerGroup = -1;
+            positions = "Tower 1a Spawns";
             canPath = OFF;
             dynamicSim = ON;
         };
-        class tower_2_spawns : tower_1_spawns
+
+        class tower_1b_spawns
         {
+            numberOfUnits = 4;
+            unitsPerGroup = -1;
+            positions = "Tower 1b Spawns";
+            canPath = OFF;
+            dynamicSim = ON;
+        };
+
+        class tower_2_spawns
+        {
+            numberOfUnits = 2;
+            canPath = OFF;
+            dynamicSim = ON;
             positions = "Tower 2 Spawns";
         };
-        class tower_3_spawns : tower_1_spawns
+        class tower_3_spawns : tower_2_spawns
         {
             positions = "Tower 3 Spawns";
         };
-        class tower_4_spawns : tower_1_spawns
+        class tower_4_spawns : tower_2_spawns
         {
             positions = "Tower 4 Spawns";
         };
@@ -117,7 +135,7 @@ class Airfield
         class stationBuilding
         {
             numberOfUnits = 10;
-            unitsPerGroup = 1;
+            unitsPerGroup = -1;
             dynamicSim = ON;
             canPath = OFF;
             positions = "Station Builing Spawns";
@@ -126,10 +144,10 @@ class Airfield
 
         class barracksInterior_spawns
         {
-            numberOfUnits = 12;
-            unitsPerGroup = 1;
+            numberOfUnits = 6;
+            unitsPerGroup = 3;
             dynamicSim = ON;
-            canPath = OFF;
+            canPath = ON;
             positions = "Barracks Interior Spawns";
         };
         class barracksExterior_spawns
