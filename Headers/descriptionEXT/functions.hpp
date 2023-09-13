@@ -27,4 +27,13 @@ class KOR
 		class setupClassEventHandler
 		{};
 	};
+
+	class AI
+	{
+		file = "functions\AI";
+
+		class handleBravoTeam
+		{};
+
+	};
 };
