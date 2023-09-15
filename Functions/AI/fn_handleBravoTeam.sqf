@@ -17,9 +17,8 @@ private _timeline = [
         [[_bravoGroup],{
             _thisArgs params ["_bravoGroup"];
             
-            [
-
-            ] call CBA_fnc_addWaypoint;
+            private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
+            (driver _boat) move (position KOR_bravoTeam_playerDropOff);
 
             _bravoGroup
         }],
@@ -32,6 +31,7 @@ private _timeline = [
         {
             params ["","","","_bravoGroup"];
 
+            // TODO: This may need more intracate waypoints
             private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
             (driver _boat) move (position KOR_bravoTeam_dismount);
 
