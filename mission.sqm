@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=8330;
+		nextID=8335;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9263;
+		nextID=9364;
 	};
 	class Camera
 	{
-		pos[]={18540.219,402.30246,2158.7236};
-		dir[]={-0.85268092,-0.51770949,0.070087798};
-		up[]={-0.51596946,0.85555649,0.04241113};
-		aside[]={0.081920713,0,0.99663901};
+		pos[]={19226.809,94.552132,2865.3606};
+		dir[]={-0.24231876,-0.17163453,-0.95492232};
+		up[]={-0.042217415,0.98515499,-0.16637096};
+		aside[]={-0.96930206,2.5386362e-007,0.24596676};
 	};
 };
 binarizationWanted=0;
@@ -40832,19 +40832,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -40910,6 +40897,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -40937,19 +40937,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41015,6 +41002,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41042,19 +41042,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41120,6 +41107,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41147,19 +41147,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41225,6 +41212,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41252,19 +41252,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41330,6 +41317,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41357,19 +41357,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41435,6 +41422,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41462,19 +41462,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41540,6 +41527,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41567,19 +41567,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41645,6 +41632,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41672,19 +41672,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41750,6 +41737,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41777,19 +41777,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41855,6 +41842,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41882,19 +41882,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -41960,6 +41947,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -41987,19 +41987,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -42065,6 +42052,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -42092,19 +42092,6 @@ class Mission
 									{
 										class Attribute0
 										{
-											property="hideObject";
-											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-											class Value
-											{
-												class data
-												{
-													singleType="BOOL";
-													value=1;
-												};
-											};
-										};
-										class Attribute1
-										{
 											property="VehicleCustomization";
 											expression="if (local _this) then {([_this] + _value + [true]) call (uinamespace getvariable 'BIS_fnc_initVehicle')};";
 											class Value
@@ -42170,6 +42157,19 @@ class Mission
 															};
 														};
 													};
+												};
+											};
+										};
+										class Attribute1
+										{
+											property="hideObject";
+											expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+											class Value
+											{
+												class data
+												{
+													singleType="BOOL";
+													value=1;
 												};
 											};
 										};
@@ -44066,14 +44066,14 @@ class Mission
 					name="AI Logic Positions";
 					class Entities
 					{
-						items=1;
+						items=2;
 						class Item0
 						{
 							dataType="Layer";
 							name="Bravo";
 							class Entities
 							{
-								items=5;
+								items=6;
 								class Item0
 								{
 									dataType="Object";
@@ -44160,17 +44160,77 @@ class Mission
 									id=8320;
 									type="Sign_Arrow_Large_Yellow_F";
 								};
+								class Item5
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={21320.477,-0.0044874474,-4049.908};
+									};
+									side="Empty";
+									class Attributes
+									{
+										name="KOR_boatSpawn_bravo";
+									};
+									id=8330;
+									type="Sign_Arrow_Direction_Yellow_F";
+									atlOffset=89.937424;
+								};
 							};
 							id=8290;
-							atlOffset=-38.06514;
+							atlOffset=173.59863;
+						};
+						class Item1
+						{
+							dataType="Layer";
+							name="Echo";
+							class Entities
+							{
+								items=2;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={19133.58,1.3554199,2720.6748};
+										angles[]={0.23175389,0,6.1489997};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+										name="KOR_echoTeam_dismount";
+									};
+									id=8333;
+									type="Sign_Arrow_Large_Pink_F";
+								};
+								class Item1
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={21318.35,0.75023228,-4061.6631};
+									};
+									side="Empty";
+									class Attributes
+									{
+										name="KOR_boatSpawn_echo";
+									};
+									id=8334;
+									type="Sign_Arrow_Large_Pink_F";
+									atlOffset=90;
+								};
+							};
+							id=8331;
+							atlOffset=90.151299;
 						};
 					};
 					id=8289;
-					atlOffset=-38.06514;
+					atlOffset=131.87497;
 				};
 			};
 			id=2663;
-			atlOffset=-89.206497;
+			atlOffset=164.75743;
 		};
 		class Item11
 		{
@@ -44476,7 +44536,7 @@ class Mission
 			position[]={19455.916,185.91736,2148.6067};
 			name="marker_23";
 			type="o_hq";
-			angle=0.10848248;
+			angle=0.10848247;
 			id=3109;
 			atlOffset=236.17938;
 		};

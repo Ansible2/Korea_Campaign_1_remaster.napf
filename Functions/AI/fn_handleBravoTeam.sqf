@@ -1,10 +1,10 @@
-#define RADIUS 20;
+#define DISMOUNT_RADIUS 20;
 
 scriptName "KOR_fnc_handleBravoTeam";
 
 if (!isServer) exitWith {
     ["Was not executed on the server!",true] call KISKA_fnc_log;
-    _this remoteExec ["KOR_fnc_handleBravoTeam",2];
+    _this remoteExecCall ["KOR_fnc_handleBravoTeam",2];
 };
 
 params [
@@ -16,19 +16,49 @@ private _timeline = [
     [
         [[_bravoGroup],{
             _thisArgs params ["_bravoGroup"];
+            
+            [
+
+            ] call CBA_fnc_addWaypoint;
+
+            _bravoGroup
+        }],
+        {
+            localNamespace getVariable ["KOR_bluforSteppingOff",false]
+        },
+        2
+    ],
+    [
+        {
+            params ["","","","_bravoGroup"];
+
+            private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
+            (driver _boat) move (position KOR_bravoTeam_dismount);
+
+            _bravoGroup
+        },
+        {
+            localNamespace getVariable ["KOR_bravoTeam_playersDroppedOff",false]
+        },
+        5
+    ],
+    [
+        {
+            params ["","","","_bravoGroup"];
+
             private _groupOwner = groupOwner _bravoGroup;
             [_bravoGroup, "WHITE"] remoteExecCall ["setCombatMode",_groupOwner];
             [_bravoGroup, "STEALTH"] remoteExecCall ["setBehaviourStrong",_groupOwner];
 
             _bravoGroup
-        }],
+        },
         {
             params ["","","","_bravoGroup"];
 
             (getPosASL (leader _bravoGroup)) 
                 vectorDistance 
             (getPosASL KOR_bravoBoatDismount) 
-                <= RADIUS
+                <= DISMOUNT_RADIUS
         },
         5
     ],

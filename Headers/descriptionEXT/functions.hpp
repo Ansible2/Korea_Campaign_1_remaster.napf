@@ -32,8 +32,11 @@ class KOR
 	{
 		file = "functions\AI";
 
+		class handleEchoTeam
+		{};
 		class handleBravoTeam
 		{};
-
+		class initFriendlyUnits
+		{};
 	};
 };
