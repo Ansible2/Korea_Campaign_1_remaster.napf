@@ -113,6 +113,7 @@ private _timeline = [
                 _echoGroup,
                 KOR_echoTeam_attackPoint_2
             ] remoteExecCall ["KISKA_fnc_attack",_groupOwner];
+            [_echoGroup, "STAG COLUMN"] remoteExecCall ["setFormation",_groupOwner];
 
             _echoGroup
         },

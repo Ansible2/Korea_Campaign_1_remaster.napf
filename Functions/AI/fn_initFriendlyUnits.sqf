@@ -6,7 +6,7 @@ if (!isServer) exitWith {
 	[] remoteExecCall ["KOR_fnc_initFriendlyUnits",2];
 };
 
-
+// TODO: handle unit health and invincible ratio(?)
 
 private _fn_spawnBoatTeam = {
 	params [
@@ -16,6 +16,7 @@ private _fn_spawnBoatTeam = {
 	];
 
 	private _boat = BOAT_TYPE createVehicle [0,0,0];
+	[_boat,false] remoteExec ["allowDamage",0,true];
 	_boat setPosASL (getPosASL _boatSpawn);
 	_boat setDir (getDir _boatSpawn);
 
