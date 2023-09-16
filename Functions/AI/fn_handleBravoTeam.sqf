@@ -51,7 +51,7 @@ private _timeline = [
             params ["","","","_bravoGroup"];
 
             private _leader = leader _bravoGroup;
-            private _distance = (getPosASL _leader) vectorDistance (getPosASL KOR_bravoTeam_boatDismount);
+            private _distance = (getPosASL _leader) vectorDistance (getPosASL KOR_bravoTeam_dismount);
 
             _distance <= DISMOUNT_RADIUS
         },

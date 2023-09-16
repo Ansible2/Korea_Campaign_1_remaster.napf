@@ -22,7 +22,6 @@ private _timeline = [
     ],
     [
         [[_echoGroup],{
-            hint "ran";
             _thisArgs params ["_echoGroup"];
 
             private _boat = _echoGroup getVariable ["KOR_teamBoat",objNull];

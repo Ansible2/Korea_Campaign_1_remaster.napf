@@ -30,6 +30,12 @@ private _fn_spawnBoatTeam = {
 		_unit moveInAny _boat;
 		_unit
 	};
+
+	_boat lockDriver true;
+	(allTurrets [_boat,false]) apply {
+		if (isNull (_boat turretUnit _x)) then {continue};
+		_boat lockTurret [_x,true];	
+	};
 	
 	_units joinSilent _group;
 	_group setBehaviourStrong "AWARE";
