@@ -14,46 +14,44 @@ params [
 
 private _timeline = [
     [
-        [[_echoGroup],{
-            _thisArgs params ["_echoGroup"];
-
-            private _boat = _echoGroup getVariable ["KOR_teamBoat",objNull];
-            (driver _boat) move (position KOR_echoTeam_dismount);
-
-            _echoGroup
-        }],
+        {},
         {
             localNamespace getVariable ["KOR_bluforSteppingOff",false]
         },
         2
     ],
     [
-        {
-            params ["","","","_echoGroup"];
-            private _groupOwner = groupOwner _echoGroup;
-            [_echoGroup, "WHITE"] remoteExecCall ["setCombatMode",_groupOwner];
-            [_echoGroup, "STEALTH"] remoteExecCall ["setBehaviourStrong",_groupOwner];
+        [[_echoGroup],{
+            hint "ran";
+            _thisArgs params ["_echoGroup"];
+
+            private _boat = _echoGroup getVariable ["KOR_teamBoat",objNull];
+            (driver _boat) move (position KOR_echoTeam_boatDismount);
 
             _echoGroup
-        },
+        }],
         {
             params ["","","","_echoGroup"];
 
-            (getPosASL (leader _echoGroup)) 
-                vectorDistance 
-            (getPosASL KOR_echoTeam_dismount) 
-                <= DISMOUNT_RADIUS
+            private _leader = leader _echoGroup;
+            private _distance = (getPosASL _leader) vectorDistance (getPosASL KOR_echoTeam_boatDismount);
+
+            _distance <= DISMOUNT_RADIUS
         },
         5
     ],
     [
         {
             params ["","","","_echoGroup"];
-            ["Echo team reached dismount"] call KISKA_fnc_log;
 
+            ["Echo team reached dismount"] call KISKA_fnc_log;
+            
+            private _groupOwner = groupOwner _echoGroup;
+            [_echoGroup, "WHITE"] remoteExecCall ["setCombatMode",_groupOwner];
+            [_echoGroup, "STEALTH"] remoteExecCall ["setBehaviourStrong",_groupOwner];
+            
             private _leader = leader _echoGroup;
             private _boat = objectParent _leader;
-            private _groupOwner = groupOwner _echoGroup;
             if !(isNull _boat) then {
                 [_echoGroup, _boat] remoteExecCall ["leaveVehicle",_groupOwner];
                 [units _echoGroup, _boat] remoteExecCall ["doGetOut",_groupOwner];
@@ -77,8 +75,10 @@ private _timeline = [
             params ["","","","_echoGroup"];
 
             private _groupOwner = groupOwner _echoGroup;
-            private _leader = leader _echoGroup;
-            [_leader, getPosATL KOR_echoTeam_waitPoint_1] remoteExecCall ["move",_groupOwner];
+            [
+                leader _echoGroup, 
+                getPosATL KOR_echoTeam_waitPoint_1
+            ] remoteExecCall ["move",_groupOwner];
 
             _echoGroup
         },

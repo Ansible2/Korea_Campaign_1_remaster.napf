@@ -14,6 +14,13 @@ params [
 
 private _timeline = [
     [
+        {},
+        {
+            localNamespace getVariable ["KOR_bluforSteppingOff",false]
+        },
+        2
+    ],
+    [
         [[_bravoGroup],{
             _thisArgs params ["_bravoGroup"];
             
@@ -21,11 +28,7 @@ private _timeline = [
             (driver _boat) move (position KOR_bravoTeam_playerDropOff);
 
             _bravoGroup
-        }],
-        {
-            localNamespace getVariable ["KOR_bluforSteppingOff",false]
-        },
-        2
+        }]
     ],
     [
         {
@@ -57,7 +60,7 @@ private _timeline = [
 
             (getPosASL (leader _bravoGroup)) 
                 vectorDistance 
-            (getPosASL KOR_bravoBoatDismount) 
+            (getPosASL KOR_bravoTeam_boatDismount) 
                 <= DISMOUNT_RADIUS
         },
         5
@@ -94,7 +97,7 @@ private _timeline = [
 
             private _groupOwner = groupOwner _bravoGroup;
             private _leader = leader _bravoGroup;
-            [_leader, getPosATL KOR_bravoWaitPoint_1] remoteExecCall ["move",_groupOwner];
+            [_leader, getPosATL KOR_bravoTeam_waitPoint_1] remoteExecCall ["move",_groupOwner];
 
             _bravoGroup
         },
@@ -110,7 +113,7 @@ private _timeline = [
             [_bravoGroup, "AWARE"] remoteExecCall ["setBehaviourStrong",_groupOwner];
             [
                 _bravoGroup,
-                KOR_bravoAttackPoint_1
+                KOR_bravoTeam_attackPoint_1
             ] remoteExecCall ["KISKA_fnc_attack",_groupOwner];
 
             _bravoGroup
@@ -127,7 +130,7 @@ private _timeline = [
             private _groupOwner = groupOwner _bravoGroup;
             [
                 _bravoGroup,
-                KOR_bravoAttackPoint_2
+                KOR_bravoTeam_attackPoint_2
             ] remoteExecCall ["KISKA_fnc_attack",_groupOwner];
 
             _bravoGroup
@@ -144,7 +147,7 @@ private _timeline = [
             private _groupOwner = groupOwner _bravoGroup;
             [
                 _bravoGroup,
-                KOR_bravoAttackPoint_3
+                KOR_bravoTeam_attackPoint_3
             ] remoteExecCall ["KISKA_fnc_attack",_groupOwner];
 
             _bravoGroup

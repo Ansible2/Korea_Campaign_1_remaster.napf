@@ -81,3 +81,6 @@
 //     ],
 //     [60]
 // ] spawn KISKA_fnc_randomMusic;
+
+
+call KOR_fnc_initFriendlyUnits;

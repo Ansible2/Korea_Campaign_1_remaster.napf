@@ -1,6 +1,6 @@
 scriptName "KOR_fnc_initFriendlyUnits";
 
-#define BOAT_TYPE
+#define BOAT_TYPE "B_T_Boat_Armed_01_minigun_F"
 
 if (!isServer) exitWith {
 	[] remoteExecCall ["KOR_fnc_initFriendlyUnits",2];
@@ -25,9 +25,11 @@ private _fn_spawnBoatTeam = {
 	_group setVariable ["KOR_teamBoat",_boat];
 
 	private _units = _groupComposition apply {
-		_group createUnit [_x,[0,0,0],[],0,"NONE"]
+		private _unit = _group createUnit [_x,[0,0,0],[],0,"NONE"];
+		_unit moveInAny _boat;
+		_unit
 	};
-
+	
 	_units joinSilent _group;
 	_group setBehaviourStrong "AWARE";
 	_group setCombatMode "BLUE";
@@ -40,7 +42,7 @@ private _fn_spawnBoatTeam = {
 private _boatTeams = [
 	[
 		KOR_fnc_handleBravoTeam,
-		KOR_boatSpawn_bravo,
+		KOR_bravoTeam_boatSpawn,
 		[
 			"rhsusf_usmc_recon_marpat_wd_teamleader_fast",
 			"rhsusf_usmc_recon_marpat_wd_rifleman_fast",
@@ -51,7 +53,7 @@ private _boatTeams = [
 	],
 	[
 		KOR_fnc_handleEchoTeam,
-		KOR_boatSpawn_echo,
+		KOR_echoTeam_boatSpawn,
 		[
 			"rhsusf_usmc_recon_marpat_wd_teamleader_fast",
 			"rhsusf_usmc_recon_marpat_wd_rifleman_fast",
