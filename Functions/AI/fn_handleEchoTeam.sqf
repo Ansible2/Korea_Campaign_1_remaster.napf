@@ -140,5 +140,5 @@ private _timeline = [
     ]
 ];
 
-[_timeline] call KISKA_fnc_startTimeline;
+[_timeline] call KISKA_fnc_timeline_start;
 
