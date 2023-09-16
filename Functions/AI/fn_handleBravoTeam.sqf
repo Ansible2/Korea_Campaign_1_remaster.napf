@@ -24,22 +24,12 @@ private _timeline = [
         [[_bravoGroup],{
             _thisArgs params ["_bravoGroup"];
             
+            // TODO: This may need more intracate waypoints
             private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
             (driver _boat) move (position KOR_bravoTeam_playerDropOff);
 
             _bravoGroup
-        }]
-    ],
-    [
-        {
-            params ["","","","_bravoGroup"];
-
-            // TODO: This may need more intracate waypoints
-            private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
-            (driver _boat) move (position KOR_bravoTeam_dismount);
-
-            _bravoGroup
-        },
+        }],
         {
             localNamespace getVariable ["KOR_bravoTeam_playersDroppedOff",false]
         },
@@ -50,29 +40,35 @@ private _timeline = [
             params ["","","","_bravoGroup"];
 
             private _groupOwner = groupOwner _bravoGroup;
-            [_bravoGroup, "WHITE"] remoteExecCall ["setCombatMode",_groupOwner];
-            [_bravoGroup, "STEALTH"] remoteExecCall ["setBehaviourStrong",_groupOwner];
+            
+            // TODO: This may need more intracate waypoints
+            private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
+            (driver _boat) move (position KOR_bravoTeam_dismount);
 
             _bravoGroup
         },
         {
             params ["","","","_bravoGroup"];
 
-            (getPosASL (leader _bravoGroup)) 
-                vectorDistance 
-            (getPosASL KOR_bravoTeam_boatDismount) 
-                <= DISMOUNT_RADIUS
+            private _leader = leader _bravoGroup;
+            private _distance = (getPosASL _leader) vectorDistance (getPosASL KOR_bravoTeam_boatDismount);
+
+            _distance <= DISMOUNT_RADIUS
         },
         5
     ],
     [
         {
             params ["","","","_bravoGroup"];
+            
             ["Bravo team reached dismount"] call KISKA_fnc_log;
+            
+            private _groupOwner = groupOwner _bravoGroup;
+            [_bravoGroup, "WHITE"] remoteExecCall ["setCombatMode",_groupOwner];
+            [_bravoGroup, "STEALTH"] remoteExecCall ["setBehaviourStrong",_groupOwner];
 
             private _leader = leader _bravoGroup;
             private _boat = objectParent _leader;
-            private _groupOwner = groupOwner _bravoGroup;
             if !(isNull _boat) then {
                 [_bravoGroup, _boat] remoteExecCall ["leaveVehicle",_groupOwner];
                 [units _bravoGroup, _boat] remoteExecCall ["doGetOut",_groupOwner];
@@ -132,6 +128,7 @@ private _timeline = [
                 _bravoGroup,
                 KOR_bravoTeam_attackPoint_2
             ] remoteExecCall ["KISKA_fnc_attack",_groupOwner];
+            [_bravoGroup, "STAG COLUMN"] remoteExecCall ["setFormation",_groupOwner];
 
             _bravoGroup
         },
