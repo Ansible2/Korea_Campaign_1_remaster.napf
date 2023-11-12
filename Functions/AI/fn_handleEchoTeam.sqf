@@ -1,5 +1,10 @@
 #define DISMOUNT_RADIUS 20;
 
+// ECHO TEAM DETAILS
+// - 11 man team
+// - inserts via boat
+// - Should immediately drive boat to KOR_echoTeam_boatDismount and dismount
+
 scriptName "KOR_fnc_handleEchoTeam";
 
 if (!isServer) exitWith {
@@ -25,7 +30,18 @@ private _timeline = [
             _thisArgs params ["_echoGroup"];
 
             private _boat = _echoGroup getVariable ["KOR_teamBoat",objNull];
-            (driver _boat) move (position KOR_echoTeam_boatDismount);
+            private _waypointObjects = ["Boat 1 Waypoints"] call KISKA_fnc_getMissionLayerObjects;
+            private _waypointObjectNames = _waypointObjects apply { vehicleVarName _x };
+            private _waypointObjectNames_sorted = [_waypointObjectNames] call KISKA_fnc_sortStringsNumerically;
+
+            _waypointObjectNames_sorted apply { 
+                private _waypointPosition = getPosASL (missionNamespace getVariable _x);
+                private _waypoint = _echoGroup addWaypoint [_waypointPosition,-1];
+                _waypoint setWaypointType "MOVE";
+            };
+            // TODO: after final waypoint, tell boat to move to dismount
+
+            // (driver _boat) move (position KOR_echoTeam_boatDismount);
 
             _echoGroup
         }],
