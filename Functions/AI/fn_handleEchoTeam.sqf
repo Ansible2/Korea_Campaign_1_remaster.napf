@@ -29,19 +29,27 @@ private _timeline = [
         [[_echoGroup],{
             _thisArgs params ["_echoGroup"];
 
-            private _boat = _echoGroup getVariable ["KOR_teamBoat",objNull];
-            private _waypointObjects = ["Boat 1 Waypoints"] call KISKA_fnc_getMissionLayerObjects;
+            private _waypointObjects = ["Echo Team Boat Waypoints"] call KISKA_fnc_getMissionLayerObjects;
             private _waypointObjectNames = _waypointObjects apply { vehicleVarName _x };
             private _waypointObjectNames_sorted = [_waypointObjectNames] call KISKA_fnc_sortStringsNumerically;
 
-            _waypointObjectNames_sorted apply { 
+            private _waypoints = _waypointObjectNames_sorted apply { 
                 private _waypointPosition = getPosASL (missionNamespace getVariable _x);
                 private _waypoint = _echoGroup addWaypoint [_waypointPosition,-1];
                 _waypoint setWaypointType "MOVE";
-            };
-            // TODO: after final waypoint, tell boat to move to dismount
 
-            // (driver _boat) move (position KOR_echoTeam_boatDismount);
+                _waypoint
+            };
+
+            private _lastMoveWaypoint = _waypoints select -1;
+            [
+                _lastMoveWaypoint,
+                {
+                    params ["_echoGroup"];
+                    private _boat = _echoGroup getVariable ["KOR_teamBoat",objNull];
+                    (driver _boat) move (position KOR_echoTeam_boatDismount);
+                }
+            ] call KISKA_fnc_setWaypointExecStatement;
 
             _echoGroup
         }],
