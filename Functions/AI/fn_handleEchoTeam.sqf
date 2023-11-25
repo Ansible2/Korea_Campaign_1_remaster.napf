@@ -29,7 +29,7 @@ private _timeline = [
         [[_echoGroup],{
             _thisArgs params ["_echoGroup"];
 
-            private _waypointObjects = ["Echo Team Boat Waypoints"] call KISKA_fnc_getMissionLayerObjects;
+            private _waypointObjects = ["Echo Team Insert Waypoints"] call KISKA_fnc_getMissionLayerObjects;
             private _waypointObjectNames = _waypointObjects apply { vehicleVarName _x };
             private _waypointObjectNames_sorted = [_waypointObjectNames] call KISKA_fnc_sortStringsNumerically;
 
@@ -67,8 +67,6 @@ private _timeline = [
         {
             params ["","","","_echoGroup"];
 
-            ["Echo team reached dismount"] call KISKA_fnc_log;
-            
             private _groupOwner = groupOwner _echoGroup;
             [_echoGroup, "WHITE"] remoteExecCall ["setCombatMode",_groupOwner];
             [_echoGroup, "STEALTH"] remoteExecCall ["setBehaviourStrong",_groupOwner];

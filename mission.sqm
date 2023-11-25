@@ -12,7 +12,7 @@ class EditorData
 	};
 	class ItemIDProvider
 	{
-		nextID=8342;
+		nextID=8361;
 	};
 	class MarkerIDProvider
 	{
@@ -20,14 +20,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=9566;
+		nextID=9975;
 	};
 	class Camera
 	{
-		pos[]={16208.091,59.870022,2764.6052};
-		dir[]={-0.029474454,-0.79536009,-0.60542017};
-		up[]={-0.03867574,0.60613722,-0.79441917};
-		aside[]={-0.99881697,-1.8626451e-009,0.048626702};
+		pos[]={21245.049,26.580862,-4051.3606};
+		dir[]={0.12342376,-0.10509237,0.98678416};
+		up[]={0.01304357,0.99446344,0.1042868};
+		aside[]={0.99227703,2.7898932e-007,-0.12411031};
 	};
 };
 binarizationWanted=0;
@@ -652,7 +652,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=102;
+		items=104;
 		class Item0
 		{
 			dataType="Layer";
@@ -664,6 +664,7 @@ class Mission
 				{
 					dataType="Layer";
 					name="Carrier Group";
+					state=1;
 					class Entities
 					{
 						items=8;
@@ -3206,7 +3207,7 @@ class Mission
 														dynamicSimulation=1;
 													};
 													id=323;
-													atlOffset=0.16867256;
+													atlOffset=90;
 												};
 												class Item1
 												{
@@ -3640,7 +3641,7 @@ class Mission
 														dynamicSimulation=1;
 													};
 													id=325;
-													atlOffset=1.9073486e-006;
+													atlOffset=90;
 												};
 												class Item2
 												{
@@ -4034,7 +4035,7 @@ class Mission
 														dynamicSimulation=1;
 													};
 													id=327;
-													atlOffset=2.4795532e-005;
+													atlOffset=90;
 												};
 												class Item3
 												{
@@ -4423,7 +4424,7 @@ class Mission
 																dynamicSimulation=1;
 															};
 															id=330;
-															atlOffset=0.0004491806;
+															atlOffset=90;
 														};
 														class Item1
 														{
@@ -4805,7 +4806,7 @@ class Mission
 																dynamicSimulation=1;
 															};
 															id=332;
-															atlOffset=100.36061;
+															atlOffset=90;
 														};
 													};
 													id=329;
@@ -44070,7 +44071,7 @@ class Mission
 						class Item0
 						{
 							dataType="Layer";
-							name="Bravo";
+							name="Bravo Team Logic Helpers";
 							class Entities
 							{
 								items=7;
@@ -44114,59 +44115,7 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={18836.857,195.71083,2436.9819};
-										angles[]={6.2561851,0,0};
-									};
-									side="Empty";
-									flags=4;
-									class Attributes
-									{
-										name="KOR_bravoTeam_attackPoint_1";
-									};
-									id=8318;
-									type="Sign_Arrow_Large_Yellow_F";
-								};
-								class Item3
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={18745.482,255.06927,2141.7209};
-										angles[]={0.078836523,0,6.251193};
-									};
-									side="Empty";
-									flags=4;
-									class Attributes
-									{
-										name="KOR_bravoTeam_attackPoint_2";
-									};
-									id=8319;
-									type="Sign_Arrow_Large_Yellow_F";
-								};
-								class Item4
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={18329.52,157.86447,1945.021};
-										angles[]={0.035988688,0,0.016999505};
-									};
-									side="Empty";
-									flags=4;
-									class Attributes
-									{
-										name="KOR_bravoTeam_attackPoint_3";
-									};
-									id=8320;
-									type="Sign_Arrow_Large_Yellow_F";
-									atlOffset=1.5258789e-005;
-								};
-								class Item5
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={16183.532,0.1762515,2385.6768};
+										position[]={21236.473,0.1169913,-4055.2715};
 									};
 									side="Empty";
 									class Attributes
@@ -44175,9 +44124,9 @@ class Mission
 									};
 									id=8330;
 									type="Sign_Arrow_Direction_Yellow_F";
-									atlOffset=50.139545;
+									atlOffset=90.058899;
 								};
-								class Item6
+								class Item3
 								{
 									dataType="Object";
 									class PositionInfo
@@ -44195,18 +44144,337 @@ class Mission
 									type="Sign_Arrow_Large_Yellow_F";
 									atlOffset=-5.9604645e-008;
 								};
+								class Item4
+								{
+									dataType="Layer";
+									name="Bravo Team Attack Waypoints";
+									class Entities
+									{
+										items=3;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={18836.857,195.71083,2436.9819};
+												angles[]={6.2561851,0,0};
+											};
+											side="Empty";
+											flags=4;
+											class Attributes
+											{
+												name="KOR_bravoTeam_attackPoint_1";
+											};
+											id=8318;
+											type="Sign_Arrow_Large_Yellow_F";
+										};
+										class Item1
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={18745.482,255.06927,2141.7209};
+												angles[]={0.078836523,0,6.251193};
+											};
+											side="Empty";
+											flags=4;
+											class Attributes
+											{
+												name="KOR_bravoTeam_attackPoint_2";
+											};
+											id=8319;
+											type="Sign_Arrow_Large_Yellow_F";
+										};
+										class Item2
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={18329.52,157.86447,1945.021};
+												angles[]={0.035988688,0,0.016999505};
+											};
+											side="Empty";
+											flags=4;
+											class Attributes
+											{
+												name="KOR_bravoTeam_attackPoint_3";
+											};
+											id=8320;
+											type="Sign_Arrow_Large_Yellow_F";
+											atlOffset=1.5258789e-005;
+										};
+									};
+									id=8346;
+									atlOffset=-3.5474396;
+								};
+								class Item5
+								{
+									dataType="Layer";
+									name="Bravo Team After Drop Off Waypoints";
+									class Entities
+									{
+										items=3;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={15472.89,0.86736923,894.5918};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_bravoTeam_postDropOffWP_1";
+											};
+											id=8358;
+											type="Sign_Arrow_Large_F";
+											atlOffset=90.117134;
+										};
+										class Item1
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={19155.277,0.48372614,-789.71747};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_bravoTeam_postDropOffWP_2";
+											};
+											id=8359;
+											type="Sign_Arrow_Large_F";
+											atlOffset=89.733498;
+										};
+										class Item2
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={20580.867,0.740192,3758.1235};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_bravoTeam_postDropOffWP_3";
+											};
+											id=8360;
+											type="Sign_Arrow_Large_F";
+											atlOffset=90;
+										};
+									};
+									id=8348;
+									atlOffset=-117.95717;
+								};
+								class Item6
+								{
+									dataType="Layer";
+									name="Bravo Team Go To Drop Off Waypoints";
+									class Entities
+									{
+										items=3;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={19085.988,0.71221894,-705.75439};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_bravoTeam_playerDropOffWP_1";
+											};
+											id=8355;
+											type="Sign_Arrow_Large_Yellow_F";
+											atlOffset=89.96199;
+										};
+										class Item1
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={15479.025,0.6617021,479.12598};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_bravoTeam_playerDropOffWP_2";
+											};
+											id=8356;
+											type="Sign_Arrow_Large_Yellow_F";
+											atlOffset=89.911469;
+										};
+										class Item2
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={16206.423,0.74978238,2677.5337};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_bravoTeam_playerDropOffWP_3";
+											};
+											id=8357;
+											type="Sign_Arrow_Large_Yellow_F";
+											atlOffset=3.9941909;
+										};
+									};
+									id=8350;
+									atlOffset=89.96814;
+								};
 							};
 							id=8290;
-							atlOffset=30.779085;
+							atlOffset=45.67289;
 						};
 						class Item1
 						{
 							dataType="Layer";
-							name="Echo";
+							name="Echo Team Logic Helpers";
 							class Entities
 							{
-								items=6;
+								items=5;
 								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={21249.43,-0.026769377,-4064.9634};
+									};
+									side="Empty";
+									class Attributes
+									{
+										name="KOR_echoTeam_boatSpawn";
+									};
+									id=8335;
+									type="Sign_Arrow_Direction_Pink_F";
+									atlOffset=89.915138;
+								};
+								class Item1
+								{
+									dataType="Layer";
+									name="Echo Team Attack Waypoints";
+									class Entities
+									{
+										items=3;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={18835.121,194.79413,2414.3521};
+												angles[]={6.1934228,0,6.2013645};
+											};
+											side="Empty";
+											flags=4;
+											class Attributes
+											{
+												name="KOR_echoTeam_attackPoint_1";
+											};
+											id=8338;
+											type="Sign_Arrow_Large_Pink_F";
+										};
+										class Item1
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={18747.893,254.71939,2151.9609};
+												angles[]={0.19354105,0,0.064906895};
+											};
+											side="Empty";
+											flags=4;
+											class Attributes
+											{
+												name="KOR_echoTeam_attackPoint_2";
+											};
+											id=8339;
+											type="Sign_Arrow_Large_Pink_F";
+										};
+										class Item2
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={18322.619,157.45576,1951.9009};
+												angles[]={0.058928922,0,0.016995618};
+											};
+											side="Empty";
+											flags=4;
+											class Attributes
+											{
+												name="KOR_echoTeam_attackPoint_3";
+											};
+											id=8340;
+											type="Sign_Arrow_Large_Pink_F";
+										};
+									};
+									id=8347;
+									atlOffset=-3.9932861;
+								};
+								class Item2
+								{
+									dataType="Layer";
+									name="Echo Team Insert Waypoints";
+									class Entities
+									{
+										items=2;
+										class Item0
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={20926.047,0.71128142,539.68994};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_echoTeam_insert_1";
+											};
+											id=8353;
+											type="Sign_Arrow_Large_Green_F";
+											atlOffset=89.961052;
+										};
+										class Item1
+										{
+											dataType="Object";
+											class PositionInfo
+											{
+												position[]={20691.975,0.68439496,3438.9856};
+											};
+											side="Empty";
+											class Attributes
+											{
+												name="KOR_echoTeam_insert_2";
+											};
+											id=8354;
+											type="Sign_Arrow_Large_Green_F";
+											atlOffset=89.944206;
+										};
+									};
+									id=8349;
+									atlOffset=89.947609;
+								};
+								class Item3
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={19122.893,13.98662,2682.0322};
+										angles[]={0.31422475,0,6.0325737};
+									};
+									side="Empty";
+									flags=4;
+									class Attributes
+									{
+										name="KOR_echoTeam_waitPoint_1";
+									};
+									id=8337;
+									type="Sign_Arrow_Large_Pink_F";
+								};
+								class Item4
 								{
 									dataType="Object";
 									class PositionInfo
@@ -44224,101 +44492,17 @@ class Mission
 									type="Sign_Arrow_Large_Pink_F";
 									atlOffset=-5.9604645e-008;
 								};
-								class Item1
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={19314.934,0.38241908,2193.2002};
-									};
-									side="Empty";
-									class Attributes
-									{
-										name="KOR_echoTeam_boatSpawn";
-									};
-									id=8335;
-									type="Sign_Arrow_Direction_Pink_F";
-									atlOffset=36.147808;
-								};
-								class Item2
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={19122.893,13.98662,2682.0322};
-										angles[]={0.31422475,0,6.0325737};
-									};
-									side="Empty";
-									flags=4;
-									class Attributes
-									{
-										name="KOR_echoTeam_waitPoint_1";
-									};
-									id=8337;
-									type="Sign_Arrow_Large_Pink_F";
-								};
-								class Item3
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={18835.121,194.79413,2414.3521};
-										angles[]={6.1934228,0,6.2013645};
-									};
-									side="Empty";
-									flags=4;
-									class Attributes
-									{
-										name="KOR_echoTeam_attackPoint_1";
-									};
-									id=8338;
-									type="Sign_Arrow_Large_Pink_F";
-								};
-								class Item4
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={18747.893,254.71939,2151.9609};
-										angles[]={0.19354105,0,0.064906895};
-									};
-									side="Empty";
-									flags=4;
-									class Attributes
-									{
-										name="KOR_echoTeam_attackPoint_2";
-									};
-									id=8339;
-									type="Sign_Arrow_Large_Pink_F";
-								};
-								class Item5
-								{
-									dataType="Object";
-									class PositionInfo
-									{
-										position[]={18322.619,157.45576,1951.9009};
-										angles[]={0.058928922,0,0.016995618};
-									};
-									side="Empty";
-									flags=4;
-									class Attributes
-									{
-										name="KOR_echoTeam_attackPoint_3";
-									};
-									id=8340;
-									type="Sign_Arrow_Large_Pink_F";
-								};
 							};
 							id=8331;
-							atlOffset=-37.386765;
+							atlOffset=64.6539;
 						};
 					};
 					id=8289;
-					atlOffset=-26.121521;
+					atlOffset=-58.097225;
 				};
 			};
 			id=2663;
-			atlOffset=-113.31927;
+			atlOffset=-156.14352;
 		};
 		class Item11
 		{
@@ -44780,6 +44964,7 @@ class Mission
 		{
 			dataType="Layer";
 			name="Arsenals";
+			state=1;
 			class Entities
 			{
 				items=3;
@@ -44941,11 +45126,11 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={21287.498,8.8021154,-4025.4792};
+						position[]={21286.92,8.8021135,-4024.9656};
 						angles[]={0,4.2940683,0};
 					};
 					side="West";
-					flags=7;
+					flags=3;
 					class Attributes
 					{
 						isPlayable=1;
@@ -44964,6 +45149,7 @@ class Mission
 					};
 					id=3129;
 					type="B_Soldier_F";
+					atlOffset=98.800674;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -45000,6 +45186,7 @@ class Mission
 			{
 			};
 			id=3128;
+			atlOffset=98.800674;
 		};
 		class Item51
 		{
@@ -47338,6 +47525,154 @@ class Mission
 			colorName="ColorEAST";
 			id=8329;
 			atlOffset=-0.00039672852;
+		};
+		class Item102
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21287.174,8.8021135,-4026.0176};
+						angles[]={0,4.2940683,0};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_B_CTRG_3";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=8343;
+					type="B_Soldier_F";
+					atlOffset=98.800674;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=8342;
+			atlOffset=98.800674;
+		};
+		class Item103
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={21287.406,8.8021135,-4027.012};
+						angles[]={0,4.2940683,0};
+					};
+					side="West";
+					flags=3;
+					class Attributes
+					{
+						isPlayable=1;
+						class Inventory
+						{
+							class uniform
+							{
+								typeName="U_B_CTRG_3";
+								isBackpack=0;
+							};
+							map="ItemMap";
+							compass="ItemCompass";
+							watch="ItemWatch";
+							radio="ItemRadio";
+						};
+					};
+					id=8345;
+					type="B_Soldier_F";
+					atlOffset=98.800674;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1.01;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=8344;
+			atlOffset=98.800674;
 		};
 	};
 };

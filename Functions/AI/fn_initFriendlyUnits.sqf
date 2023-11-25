@@ -41,7 +41,7 @@ private _fn_spawnBoatTeam = {
 	_group setBehaviourStrong "AWARE";
 	_group setCombatMode "BLUE";
 
-	[_group] spawn _handler;
+	[_group] call _handler;
 
 	[_group,_units]
 };
@@ -77,15 +77,12 @@ private _boatTeams = [
 	]
 ] apply { _x call _fn_spawnBoatTeam };
 
+
 private _allUnits = [];
-_allUnits append ((_boatTeams select 0) select 1);
-_allUnits append ((_boatTeams select 1) select 1);
-
-
-
-
-
-
+_boatTeams apply {
+	private _unitsInTeam = _x select 1;
+	_allUnits append _unitsInTeam;
+};
 
 allCurators apply {
 	_x addCuratorEditableObjects [_allUnits,false];

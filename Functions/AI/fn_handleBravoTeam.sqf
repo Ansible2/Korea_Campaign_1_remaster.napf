@@ -11,6 +11,9 @@ params [
     ["_bravoGroup",grpNull,[grpNull]]
 ];
 
+// drive to player drop off
+// wait for players to be dropped off
+// drive to dismount
 
 private _timeline = [
     [
@@ -23,36 +26,74 @@ private _timeline = [
     [
         [[_bravoGroup],{
             _thisArgs params ["_bravoGroup"];
-            
-            // TODO: This may need more intracate waypoints
-            private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
-            (driver _boat) move (position KOR_bravoTeam_playerDropOff);
 
-            _bravoGroup
+            private _waypointObjects = ["Bravo Team Go To Drop Off Waypoints"] call KISKA_fnc_getMissionLayerObjects;
+            private _waypointObjectNames = _waypointObjects apply { vehicleVarName _x };
+            private _waypointObjectNames_sorted = [_waypointObjectNames] call KISKA_fnc_sortStringsNumerically;
+
+            private _waypointPositions = _waypointObjectNames_sorted apply { 
+                private _waypointPosition = getPosASL (missionNamespace getVariable _x);
+                private _waypoint = _bravoGroup addWaypoint [_waypointPosition,-1];
+                _waypoint setWaypointType "MOVE";
+
+                _waypointPosition
+            };
+
+            private _lastWaypointPosition = _waypointPositions select -1;
+            [_bravoGroup,_lastWaypointPosition]
         }],
         {
-            localNamespace getVariable ["KOR_bravoTeam_playersDroppedOff",false]
+            params ["","","","_returnedArgs"];
+            _returnedArgs params ["_bravoGroup","_lastWaypointPosition"];
+
+            private _leader = leader _bravoGroup;
+            private _distance = (getPosASL _leader) vectorDistance _lastWaypointPosition;
+            private _inRadius = _distance <= DISMOUNT_RADIUS;
+
+            private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
+            private _unitsInBoat = crew _boat;
+            private _playerInBoat = [
+                _unitsInBoat,
+                {isPlayer _x}
+            ] call KISKA_fnc_findIfBool;
+
+            _inRadius AND (!_playerInBoat)
         },
         5
     ],
     [
-        {
-            params ["","","","_bravoGroup"];
+        [[_bravoGroup],{
+            _thisArgs params ["_bravoGroup"];
 
-            private _groupOwner = groupOwner _bravoGroup;
-            
-            // TODO: This may need more intracate waypoints
-            private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
-            (driver _boat) move (position KOR_bravoTeam_dismount);
+            private _waypointObjects = ["Bravo Team After Drop Off Waypoints"] call KISKA_fnc_getMissionLayerObjects;
+            private _waypointObjectNames = _waypointObjects apply { vehicleVarName _x };
+            private _waypointObjectNames_sorted = [_waypointObjectNames] call KISKA_fnc_sortStringsNumerically;
+
+            private _waypoints = _waypointObjectNames_sorted apply { 
+                private _waypointPosition = getPosASL (missionNamespace getVariable _x);
+                private _waypoint = _bravoGroup addWaypoint [_waypointPosition,-1];
+                _waypoint setWaypointType "MOVE";
+
+                _waypoint
+            };
+
+            private _lastMoveWaypoint = _waypoints select -1;
+            [
+                _lastMoveWaypoint,
+                {
+                    params ["_bravoGroup"];
+                    private _boat = _bravoGroup getVariable ["KOR_teamBoat",objNull];
+                    (driver _boat) move (position KOR_bravoTeam_dismount);
+                }
+            ] call KISKA_fnc_setWaypointExecStatement;
 
             _bravoGroup
-        },
+        }],
         {
             params ["","","","_bravoGroup"];
 
             private _leader = leader _bravoGroup;
             private _distance = (getPosASL _leader) vectorDistance (getPosASL KOR_bravoTeam_dismount);
-
             _distance <= DISMOUNT_RADIUS
         },
         5
@@ -60,8 +101,6 @@ private _timeline = [
     [
         {
             params ["","","","_bravoGroup"];
-            
-            ["Bravo team reached dismount"] call KISKA_fnc_log;
             
             private _groupOwner = groupOwner _bravoGroup;
             [_bravoGroup, "WHITE"] remoteExecCall ["setCombatMode",_groupOwner];
